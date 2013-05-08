@@ -40,7 +40,7 @@ public:
 
 private:
     std::string name;
-    weapon equiped_weapon;
+    weapon equipped_weapon;
     int max_health;
     int current_health;
 };

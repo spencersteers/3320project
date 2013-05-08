@@ -7,6 +7,7 @@
 #ifndef __3320project__weapon__
 #define __3320project__weapon__
 
+#include <string>
 
 class weapon
 {

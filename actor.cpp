@@ -6,7 +6,7 @@
 #include "actor.h"
 
 actor::actor(std::string n, weapon& w, int mh):name(n),
-                                               equiped_weapon(w),
+                                               equipped_weapon(w),
                                                max_health(mh)
 {
     current_health = max_health;
@@ -25,3 +25,12 @@ int actor::get_current_health() { return current_health; }
 
 int actor::get_max_health() { return max_health; }
 
+bool actor::will_hit() 
+{ 
+    return rng::get_instance().probability(equipped_weapon.get_hit_chance());
+}
+
+int actor::get_weapon_damage()
+{
+    return equipped_weapon.get_damage();
+}

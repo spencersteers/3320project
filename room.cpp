@@ -5,17 +5,16 @@
 
 #include "room.h"
 
-void room::add_connection(std:string room_name)
+void room::add_connection(std::string room_name)
 {
-    if (find(connected_rooms.begin(), connected_rooms.end(), room_name) 
-                                                != connected_rooms.end())
+    if (find(connected_rooms.begin(), connected_rooms.end(), room_name) != connected_rooms.end())
     {
         connected_rooms.push_back(room_name);
     }
 }
 
 
-const std::vector<std::string>& get_connections()
+const std::vector<std::string>& room::get_connections()
 {
     return connected_rooms;
 }

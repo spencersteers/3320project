@@ -15,7 +15,7 @@
 class actor
 {
 public:
-    actor(std::string n, weapon& w, int mh);
+    actor(std::string n, weapon w, int mh);
 
     // Pre: None
     // Post: returns true if current_health < 0

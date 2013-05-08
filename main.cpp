@@ -17,7 +17,7 @@ void initialize_rooms()
     std::cout << w.get_name() << " " << w.get_damage() << " " << w.get_hit_chance();
     std::cout << std::endl;
     
-    actor player = actor::create_player();
+    actor player = actor::create_random_enemy();
     
     std::cout << player.get_name() << " " << player.get_weapon_damage() << " " << player.get_max_health();
     

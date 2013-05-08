@@ -5,7 +5,7 @@
 
 #include "actor.h"
 
-actor::actor(std::string n, weapon& w, int mh):name(n),
+actor::actor(std::string n, weapon w, int mh):name(n),
                                                equipped_weapon(w),
                                                max_health(mh)
 {
@@ -30,7 +30,36 @@ bool actor::will_hit()
     return rng::get_instance().probability(equipped_weapon.get_hit_chance());
 }
 
-int actor::get_weapon_damage()
+int actor::get_weapon_damage() { return equipped_weapon.get_damage(); }
+
+const weapon& actor::get_equipped_weapon() { return equipped_weapon; }
+
+actor actor::create_player()
 {
-    return equipped_weapon.get_damage();
+    actor p("Player", weapon::create_random_player_weapon(), 50);
+    return p;
+}
+
+actor actor::create_random_enemy()
+{
+    int enemy_to_create = rng::get_instance().range(3);
+    
+    // Troll
+    if (enemy_to_create == 0)
+    {
+        actor e("Troll", weapon::create_random_enemy_weapon(), 13);
+        return e;
+    }
+    // Gelfling
+    else if (enemy_to_create == 1)
+    {
+        actor e("Gelfling", weapon::create_random_enemy_weapon(), 6);
+        return e;
+    }
+    // Belf
+    else
+    {
+        actor e("Belf", weapon::create_random_enemy_weapon(), 7);
+        return e;
+    }
 }

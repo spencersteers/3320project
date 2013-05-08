@@ -37,6 +37,18 @@ public:
     std::string get_name();
     int get_current_health();
     int get_max_health();
+    const weapon& get_equipped_weapon();
+
+    /* Factory Functions */
+    
+    // Pre: None
+    // Post: An initialized actor to the player spec
+    static actor create_player();
+    
+    // Pre: None
+    // Post: An initialized actor that is one of three random enemies
+    static actor create_random_enemy();
+    
 
 private:
     std::string name;

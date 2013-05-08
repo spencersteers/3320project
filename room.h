@@ -16,6 +16,8 @@ class room
 {
 public:
 
+    room(std::string n, actor e);
+
     // Pre: None
     // Post: adds a room name as a connection
     void add_connection(std::string room_name);
@@ -23,7 +25,7 @@ public:
     // Pre: None
     // Post: returns a vector of room names the instance is
     //       connected to
-    const std::vector<std::string>& get_connections();
+    std::vector<std::string> get_connections();
 
     // Pre: None
     // Post: Checks if there is anything left to do in the room    
@@ -32,6 +34,7 @@ public:
 
 
     /**** Getters ****/
+    std::string get_name();
     actor& get_enemy();
 
 private:

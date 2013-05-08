@@ -5,16 +5,18 @@
 
 #include "room.h"
 
+room::room(std::string n, actor e):name(n), enemy(e) {}
+
 void room::add_connection(std::string room_name)
 {
-    if (find(connected_rooms.begin(), connected_rooms.end(), room_name) != connected_rooms.end())
-    {
+    //if (find(connected_rooms.begin(), connected_rooms.end(), room_name) != connected_rooms.end())
+    //{
         connected_rooms.push_back(room_name);
-    }
+    //}
 }
 
 
-const std::vector<std::string>& room::get_connections()
+std::vector<std::string> room::get_connections()
 {
     return connected_rooms;
 }
@@ -24,3 +26,7 @@ bool room::is_clear()
     if (enemy.is_dead())
         return true;
 }
+
+std::string room::get_name() { return name; }
+
+actor& room::get_enemy() { return enemy; }

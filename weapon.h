@@ -8,6 +8,7 @@
 #define __3320project__weapon__
 
 #include <string>
+#include "rng.h"
 
 class weapon
 {
@@ -20,6 +21,16 @@ public:
     int get_damage();
     int get_hit_chance();
 
+    /* Factory Methods */
+    
+    // Pre: None
+    // Post: Returns either a sword, axe, or spear
+    static weapon create_random_player_weapon();
+    
+    // Pre: None
+    // Post: Returns either a troth, geff, or beff
+    static weapon create_random_enemy_weapon();
+    
 
 private:
     std::string name;

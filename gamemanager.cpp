@@ -87,7 +87,7 @@ void gamemanager::main_loop()
         {
             /* display */
             print_newline(player.get_name() + " stands in the empty " + current_room->get_name());
-            print_line("Where do you want to go? ");
+            print_newline("Where do you want to go? ");
             std::vector<std::string> conn = current_room->get_connections();
             int count = 0;
             for (std::vector<std::string>::iterator i = conn.begin(); i != conn.end(); ++i)

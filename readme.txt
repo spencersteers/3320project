@@ -15,8 +15,8 @@ gamemanager
     - uses a finite state machine in main_loop()
     - each state triggers jumps to new states
     - flows in descending order unless death or victory occurs
-
     - handles battle inside battle() function
+    - to speed up game lower the SLEEP variables
 
 rng
     - singleton object 

@@ -15,6 +15,7 @@
 class actor
 {
 public:
+    actor() {};
     actor(std::string n, weapon w, int mh);
 
     // Pre: None

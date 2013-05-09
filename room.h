@@ -15,12 +15,17 @@
 class room
 {
 public:
-
+    room() {};
     room(std::string n, actor e);
 
     // Pre: None
     // Post: adds a room name as a connection
     void add_connection(std::string room_name);
+
+    // Pre: 4 strings corresponding to room names or obstacles (wall)
+    // Post: The room wil then hold the connections to the other rooms
+    void initalize_connections(std::string north, std::string south,
+                                std::string east, std::string west);
 
     // Pre: None
     // Post: returns a vector of room names the instance is

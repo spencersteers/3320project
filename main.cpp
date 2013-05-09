@@ -10,6 +10,7 @@
 #include "rng.h"
 #include "room.h"
 
+#include "gamemanager.h"
 
 void initialize_rooms()
 {
@@ -39,6 +40,7 @@ void initialize_rooms()
 int main(int argc, char const *argv[])
 {
     
-    initialize_rooms();
+    gamemanager game;
+    game.start_game();
     return 0;
 }

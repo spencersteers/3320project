@@ -15,7 +15,6 @@ void room::add_connection(std::string room_name)
     //}
 }
 
-
 std::vector<std::string> room::get_connections()
 {
     return connected_rooms;
@@ -30,3 +29,4 @@ bool room::is_clear()
 std::string room::get_name() { return name; }
 
 actor& room::get_enemy() { return enemy; }
+

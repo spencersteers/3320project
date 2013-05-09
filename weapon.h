@@ -13,8 +13,8 @@
 class weapon
 {
 public:
+    weapon() {};
     weapon(std::string n, int d, int hc);
-
 
     /* Getters */
     std::string get_name();

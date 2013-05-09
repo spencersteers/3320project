@@ -18,10 +18,10 @@ void gamemanager::start_game()
     //system("clear");
     //std::cout << std::string( 100, '\n' );
     std::cout << std::endl;
-    std::cout << "Welcome to the evil castle!" << std::endl;
+    std::cout << "Hail! And Welcome to the evil castle!" << std::endl;
     std::cout << "Please consult the readme for information" << std::endl;
     std::cout << "on how the project and code is structured" << std::endl;
-    std::cout << "Enjoy your time in the castle!" << std::endl;
+    std::cout << "May your swords stay sharp, and your spells fast!" << std::endl;
 
     char c;
     std::cout << "Press any key followed by ENTER -> ";

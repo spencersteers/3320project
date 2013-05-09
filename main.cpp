@@ -7,12 +7,12 @@
 // the rest of the game takes place 
 // inside gamemanage.main_loop()
 
+#include <cstdlib>
 #include "gamemanager.h"
 
-int main(int argc, char const *argv[])
+int main()
 {
-    
     gamemanager game;
     game.start_game();
-    return 0;
+    return EXIT_SUCCESS;
 }

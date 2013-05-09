@@ -16,7 +16,15 @@ void actor::take_damage(int dam) { current_health -= dam; }
 
 std::string actor::get_name() { return name; }
 
-int actor::get_current_health() { return current_health; }
+int actor::get_current_health() 
+{
+    if (is_dead())
+    {
+        return 0;
+    } 
+
+    return current_health; 
+}
 
 int actor::get_max_health() { return max_health; }
 

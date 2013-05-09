@@ -9,7 +9,6 @@
 
 #include <string>
 #include <vector>
-#include <algorithm>
 #include "actor.h"
 
 class room
@@ -37,16 +36,16 @@ public:
     bool is_clear();
 
 
-
     /**** Getters ****/
     std::string get_name();
     actor& get_enemy();
+
+    static const int TREASURE_VALUE = 100;
 
 private:
     std::string name;
     std::vector<std::string> connected_rooms;
     actor enemy;
-    static const int TREASURE_VALUE = 100;
 };
 
 #endif

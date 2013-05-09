@@ -7,17 +7,12 @@
 
 actor::actor(std::string n, weapon w, int mh):name(n),
                                                equipped_weapon(w),
-                                               max_health(mh)
-{
-    current_health = max_health;
-}
-
+                                               max_health(mh),
+                                               current_health(mh) {};
 
 bool actor::is_dead() { return current_health <= 0; }
 
 void actor::take_damage(int dam) { current_health -= dam; }
-
-
 
 std::string actor::get_name() { return name; }
 
@@ -32,7 +27,7 @@ bool actor::will_hit()
 
 int actor::get_weapon_damage() { return equipped_weapon.get_damage(); }
 
-const weapon& actor::get_equipped_weapon() { return equipped_weapon; }
+weapon actor::get_equipped_weapon() { return equipped_weapon; }
 
 actor actor::create_player()
 {

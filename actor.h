@@ -38,7 +38,7 @@ public:
     std::string get_name();
     int get_current_health();
     int get_max_health();
-    const weapon& get_equipped_weapon();
+    weapon get_equipped_weapon();
 
     /* Factory Functions */
     
